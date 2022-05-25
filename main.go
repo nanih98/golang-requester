@@ -10,12 +10,12 @@ import (
 )
 
 const (
-	colorReset = "\033[0m"
-    colorRed = "\033[31m"
-    colorGreen = "\033[32m"
-    colorYellow = "\033[33m"
-    colorPurple = "\033[35m"
-    colorCyan = "\033[36m"
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorPurple = "\033[35m"
+	colorCyan   = "\033[36m"
 )
 
 func MakeGetRequest(url string, ch chan<- string) {
@@ -40,7 +40,7 @@ func main() {
 	err := parser.Parse(os.Args)
 
 	if err != nil {
-		log.Print(string(colorCyan),parser.Usage((err)),string(colorReset))
+		log.Print(string(colorCyan), parser.Usage((err)), string(colorReset))
 	}
 
 	//Requester block
